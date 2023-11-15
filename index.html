@@ -27,6 +27,9 @@
           <li class="navigation-item">
             <a class="navigation-link" href="catalog.html">Гостиницы</a>
           </li>
+          </ul>
+          <div class="nav-list2">
+          <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden"> Поиск </span>
@@ -51,10 +54,11 @@
               />
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Хочу сюда!</a>
+          <li class="navigation-item-button">
+            <a class="navigation-link-button" href="#">Хочу сюда!</a>
           </li>
         </ul>
+        </div>
       </nav>
     </header>
     <main class="main-container main-index">
@@ -71,7 +75,7 @@
         </section>
         <section class="advantage">
           <h2 class="advantage-title-white">
-            Седона — небольшой городок в Аризоне, заслуживающий большего!
+            Седона — небольшой городок в Аризоне,заслуживающий большего!
           </h2>
           <p class="advantage-description-white">
             Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
@@ -94,29 +98,30 @@
             </li>
             <li class="advantages-item">
               <div class="blue-block">
-              <div class="advantage-item-content-blue">
-                <h2 class="advantage-title-blue">Небольшая площадь</h2>
-                <p class="advantage-description-blue">
+              <div class="advantage-item-content-blue1">
+                <h2 class="advantages-title-blue">Небольшая площадь</h2>
+                <p class="advantages-description-blue">
                   Все достопримечательности находятся очень близко
                 </p>
               </div>
             </li>
             <li class="advantages-item">
-              <div class="advantage-item-content-blue">
+              <div class="advantage-item-content-blue1 advantage-item-content-grey">
                 <h2 class="advantage-title">Красивая дорога</h2>
-                <p class="advantage-description">
+                <p class="advantages-description-blue">
                   Ехать в Седону из Лас-Вегаса совсем не скучно!
                 </p>
               </div>
             </li>
             <li class="advantages-item">
-              <div class="advantage-item-content-blue">
+              <div class="advantage-item-content-blue1">
                 <h2 class="advantage-title">Мало туристов</h2>
-                <p class="advantage-description">
+                <p class="advantages-description-blue">
                   Большинство едет в Гранд Каньон и толпится там
                 </p>
               </div>
             </li>
+            </div>
             <li class="advantages-item">
               <div class="advantage-item-content">
                 <h2 class="advantage-title">Там есть мост дьявола</h2>
@@ -146,7 +151,7 @@
         <section class="advantages">
           <ul class="advantages-list">
             <li class="advantages-item">
-              <div class="advantage-item-content-blue">
+              <div class="advantage-item-content-blue2">
                 <img
                   class="icon"
                   src="images/icons-main/icon-house.svg"
@@ -161,7 +166,7 @@
               </div>
             </li>
             <li class="advantages-item">
-              <div class="advantage-item-content-blue">
+              <div class="advantage-item-content-blue2 advantage-item-content-white">
                 <img
                   class="icon"
                   src="images/icons-main/icon-burger.svg"
@@ -177,7 +182,7 @@
               </div>
             </li>
             <li class="advantages-item">
-              <div class="advantage-item-content-blue">
+              <div class="advantage-item-content-blue2">
                 <img
                   class="icon"
                   src="images/icons-main/icon-gift.svg"
@@ -264,5 +269,44 @@
       </ul>
       </div>
     </footer>
+
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-hotel">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="hotel-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="field-group">
+              <label class="arrival-date" for="arrival-date">Дата Заезда:</label>
+              <input class="hotel-form-field field" type="date" id="arrival-date" name="arrival-date">
+            </p>
+            <p class="field-group">
+              <label class="date-of-departure" for="date-of-departure">Дата Выезда:</label>
+              <input class="hotel-form-field field" type="date" id="date-of-departure" name="date-of-departure">
+            </p>
+            <div class="buttons-modal">
+      <div class="modal-buttons">
+              <label class="adults" for="adults">Взрослые:</label>
+              <input class="hotel-modal-form-field" type="number" id="adults" name="adults" placeholder="2" data-max-count="10">
+          </div>
+          <div class="modal-buttons">
+              <label class="children" for="children">Дети:</label>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                  <svg  class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"><path d="M8 14A6 6 0 108 2a6 6 0 000 12zm1.27-8.73a1.27 1.27 0 11-2.54 0 1.27 1.27 0 012.54 0zm0 2.23V11H6.73V7.5h2.54z"/></svg>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                </span>
+              </span>
+              <input class="hotel-modal-form-field" type="number" id="children" name="children" placeholder="2" data-max-count="10">
+          </div>
+          </div>
+            <button class="button hotel-form-button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 </html>
